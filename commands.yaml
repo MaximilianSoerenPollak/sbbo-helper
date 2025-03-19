@@ -1,0 +1,7 @@
+commands:
+  - name: "Build Docs"
+    command: "bazelisk build //docs:docs"
+  - name: "Build Docs Incremental"
+    command: "bazelisk run //docs:incremental"
+  - name: "Run Tests"
+    command: "bazelisk test //..."
