@@ -1,7 +1,9 @@
 commands:
-  - name: "Build Docs"
-    command: "bazelisk build //docs:docs"
-  - name: "Build Docs Incremental"
-    command: "bazelisk run //docs:incremental"
-  - name: "Run Tests"
-    command: "bazelisk test //..."
+  - Test:
+    - name: "Run All Tests"
+      command: "bazel test //..."
+  - Build: 
+    - name: "Build Docs"
+      command: "bazel build //docs:docs"
+    - name: "Build Docs Incremental"
+      command: "bazel run //docs:incremental"
